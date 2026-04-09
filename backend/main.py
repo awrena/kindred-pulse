@@ -255,10 +255,10 @@ def seed_data():
         ),
         Post(
             author_id=users[4].id,
-            content="When you realize it's only Tuesday.",
-            image_url="https://lh3.googleusercontent.com/aida-public/AB6AXuATr7buuscr3VOZZ3mxFcyInjMlFiyDGyyoMWsZ-mgN7no-_P30GcoaTkhhcj90ibe8DRaFzk15O37wwB47I4oxW_pzDv3W0zQp94Wl-JGIE1JG_UG9M8H9G3HHJHDJnJPMZuXh6h17CTOKVCzq8ph4iLYFoHY_re76eGGsNlsZYZxj-kXbnX-dDuyyOryI2ga_zQhY5dMKDVu2kXWA3y27R2t0-rmNWHwzhRlYL2Tf1vppuhboe5Y4i0BxYlwr1XEHhXAkr-MXefc",
+            content="Zrobiłem apkę w 1h. Dlaczego wy wyceniacie to na 3 miesiące",
+            image_url="/meme.jpeg",
             post_type="meme",
-            reactions=json.dumps({"☕": 42, "🔥": 18}),
+            reactions=json.dumps({"😂": 128, "🔥": 64, "☕": 42}),
         ),
     ]
     db.add_all(posts)
