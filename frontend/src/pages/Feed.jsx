@@ -15,7 +15,7 @@ function timeAgo(dateStr) {
 function MemeOfTheDay({ meme }) {
   if (!meme) return null
   return (
-    <section className="sticky top-20 md:top-24 z-40 pt-2">
+    <section className="pt-2">
       <div className="bg-surface-container-highest rounded-xl p-4 shadow-sm">
         <div className="flex items-center justify-between mb-4">
           <span className="bg-tertiary-container text-on-tertiary-container px-3 py-1 rounded-full text-xs font-bold tracking-wide uppercase">
@@ -143,7 +143,7 @@ function PostCard({ post }) {
 
 function EventsSidebar({ events }) {
   return (
-    <aside className="hidden xl:block w-80 space-y-6 sticky top-24 h-fit shrink-0">
+    <aside className="hidden xl:block w-96 space-y-6 sticky top-24 h-fit shrink-0">
       <div className="bg-surface-container-lowest rounded-xl p-6 shadow-sm border border-outline-variant/10">
         <div className="flex items-center gap-2 mb-6">
           <Icon name="bolt" className="text-secondary" />
@@ -156,19 +156,40 @@ function EventsSidebar({ events }) {
               to={`/events/${event.id}`}
               className="block p-4 rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-colors"
             >
-              <div className="flex justify-between items-start mb-2">
-                <Icon name={event.event_type === 'coffee' ? 'coffee' : event.event_type === 'darts' ? 'sports_esports' : 'restaurant'} className="text-primary-dim" />
-                <span className="text-[10px] font-black uppercase text-on-secondary-container bg-secondary-container px-2 py-0.5 rounded">
-                  {event.participant_count} joined
-                </span>
+              <div className="flex items-center gap-3 mb-3">
+                {event.image_url ? (
+                  <img className="w-12 h-12 rounded-full object-cover shrink-0" src={event.image_url} alt={event.title} />
+                ) : (
+                  <div className="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center shrink-0">
+                    <Icon name={event.event_type === 'coffee' ? 'coffee' : event.event_type === 'darts' ? 'sports_esports' : 'restaurant'} className="text-primary-dim" />
+                  </div>
+                )}
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center gap-2 mb-0.5">
+                    <Icon name={event.event_type === 'coffee' ? 'coffee' : event.event_type === 'darts' ? 'sports_esports' : 'restaurant'} className="text-primary-dim text-base" size="18px" />
+                    <h4 className="font-bold text-sm truncate">{event.title}</h4>
+                  </div>
+                  <p className="text-xs text-on-surface-variant">
+                    {event.location} • {event.participant_count} joined
+                  </p>
+                </div>
               </div>
-              <h4 className="font-bold text-sm mb-1">{event.title}</h4>
-              <p className="text-xs text-on-surface-variant mb-4">
-                {event.location} • {event.participant_count} people joined
-              </p>
-              <button className="w-full py-2 bg-primary text-on-primary text-xs font-bold rounded-lg active:scale-95 transition-transform">
-                Join
-              </button>
+              {event.event_type === 'coffee' ? (
+                <div className="space-y-2">
+                  <div className="flex flex-wrap gap-2 text-xs">
+                    <span className="bg-surface-container-highest px-3 py-1.5 rounded-full font-medium">☕ Czarna <span className="font-bold text-primary">3</span></span>
+                    <span className="bg-surface-container-highest px-3 py-1.5 rounded-full font-medium">🥛 Cappuccino <span className="font-bold text-primary">5</span></span>
+                    <span className="bg-surface-container-highest px-3 py-1.5 rounded-full font-medium">⚡ Espresso <span className="font-bold text-primary">2</span></span>
+                  </div>
+                  <button className="w-full py-2 bg-gradient-to-br from-primary to-primary-container text-on-primary text-xs font-bold rounded-lg active:scale-95 transition-transform">
+                    ☕ Zamawiam kawę
+                  </button>
+                </div>
+              ) : (
+                <button className="w-full py-2 bg-primary text-on-primary text-xs font-bold rounded-lg active:scale-95 transition-transform">
+                  Join
+                </button>
+              )}
             </Link>
           ))}
         </div>
