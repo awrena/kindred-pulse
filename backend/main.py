@@ -274,14 +274,14 @@ def seed_data():
     events = [
         Event(
             creator_id=users[4].id,
-            title="Coffee at the machine",
-            description="A spontaneous gathering for morning energy, casual shop talk, and the perfect roast. No agenda, just vibes.",
+            title="Kuba przy kawomacie",
+            description="Kuba zaprasza na kawę i spontaniczną pogawędkę. Bez agendy, same dobre viby.",
             event_type="coffee",
             location="Main Lobby Floor 2",
             vibe="Chill & Chat",
             starts_at=now + timedelta(minutes=5),
             capacity=5,
-            image_url="https://lh3.googleusercontent.com/aida-public/AB6AXuBVfYpB37gjSnaegVttwnB3zrevoYsXWIYTaOT4wMGoK4FjGxl_deTN54Pyj3LVb_mUpAVSF-tkw8emWZ-SEkTmiqmd_3XMpXYNA1LTxmIocokgs20MJXXDWysGN-od233ycc8B-4X4qF9AgS79J_PMr2bFI-tHm33De9HQpJQ1fMABhYeVZX3ewQ_nzIwb4T5E9RB4DLUNX7vlIdnpT_tjGlrBb8z2G6SGvejKrXQMrTKlUXvbTMMxymzbKDa4oejaIGKnhTwkDCA",
+            image_url="/kuba.jpeg",
         ),
         Event(
             creator_id=users[0].id,
