@@ -26,10 +26,12 @@ function MemeOfTheDay({ meme }) {
           </span>
         </div>
         {meme.image_url && (
-          <div className="rounded-lg overflow-hidden mb-4 bg-surface-dim aspect-video relative">
-            <img className="w-full h-full object-cover" src={meme.image_url} alt="Meme" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-            <div className="absolute bottom-4 left-4 right-4 text-white font-headline font-bold text-lg leading-tight">
+          <div className="rounded-lg overflow-hidden mb-4 bg-surface-dim relative">
+            <div className="bg-on-surface text-white px-6 py-4 font-headline font-extrabold text-xl text-center uppercase tracking-wide">
+              BU Director po hackatonie AI
+            </div>
+            <img className="w-full object-contain max-h-[500px] mx-auto" src={meme.image_url} alt="Meme" />
+            <div className="bg-on-surface text-white px-6 py-4 font-headline font-bold text-lg text-center">
               {meme.content}
             </div>
           </div>
