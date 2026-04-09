@@ -1,0 +1,280 @@
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error-container": "#65000b",
+                    "primary-container": "#ffad94",
+                    "secondary-dim": "#005e57",
+                    "on-primary-fixed-variant": "#7d290b",
+                    "primary-fixed-dim": "#ff9878",
+                    "on-secondary-container": "#005c56",
+                    "secondary-container": "#8ef4e9",
+                    "on-primary": "#fff7f5",
+                    "inverse-primary": "#fd8863",
+                    "on-secondary-fixed": "#004843",
+                    "tertiary": "#7a5a00",
+                    "on-tertiary-container": "#584000",
+                    "error-dim": "#70030f",
+                    "outline-variant": "#bcb19b",
+                    "primary-fixed": "#ffad94",
+                    "primary": "#a04223",
+                    "error-container": "#f56965",
+                    "tertiary-dim": "#6b4e00",
+                    "primary-dim": "#903618",
+                    "on-secondary-fixed-variant": "#006760",
+                    "surface-container-high": "#f3e7d2",
+                    "on-tertiary": "#fff8f1",
+                    "on-tertiary-fixed": "#402d00",
+                    "surface-container-highest": "#eee1ca",
+                    "on-tertiary-fixed-variant": "#634900",
+                    "surface-container-low": "#fdf2e2",
+                    "on-surface": "#393222",
+                    "on-primary-container": "#712003",
+                    "surface-dim": "#e6d9bf",
+                    "surface-tint": "#a04223",
+                    "on-background": "#393222",
+                    "tertiary-fixed-dim": "#efb520",
+                    "outline": "#837a66",
+                    "surface-container-lowest": "#ffffff",
+                    "on-surface-variant": "#675e4c",
+                    "error": "#ac3434",
+                    "surface": "#fff8f1",
+                    "tertiary-fixed": "#fec330",
+                    "inverse-surface": "#110e06",
+                    "on-error": "#fff7f6",
+                    "surface-container": "#f8edda",
+                    "surface-bright": "#fff8f1",
+                    "surface-variant": "#eee1ca",
+                    "secondary-fixed-dim": "#7fe6db",
+                    "secondary": "#006b64",
+                    "inverse-on-surface": "#a49c8f",
+                    "tertiary-container": "#fec330",
+                    "on-primary-fixed": "#4f1200",
+                    "on-secondary": "#e2fffa",
+                    "background": "#fff8f1",
+                    "secondary-fixed": "#8ef4e9"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Be Vietnam Pro"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#fff8f1] dark:bg-stone-900 flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-3">
+<img alt="User profile photo" class="w-10 h-10 rounded-full bg-primary-container" data-alt="close-up portrait of a friendly man with glasses and a warm smile, stylized flat illustration style with vibrant background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhRxnv0iKBjZqY_4l0Q8dhiRF070TI_O405XdKtFBRuaxT5JvchESqjSsfGukDHiG5Sq0vuYi1u-q4QEX5O-EQrOyaBBnwoB8Z1OtE7-UsQtsJjAGXZwnbHppYXvs5K_ar6Zo8s35s2FbE6taTxCHJTOVpL-XQXVwT3b2F5E6Arrpx34YOZaAM79bBxHYsiR0u5FrIGSJGcQbHLD6tabFKo6OejfDuRjIRFX81DvfytmrrPWu788AciOUNQw19UfBTtolTX5MSlGs"/>
+<h1 class="font-headline font-bold text-2xl tracking-tight text-[#a04223] dark:text-[#ffad94]">Hello, Team!</h1>
+</div>
+<div class="flex gap-2">
+<button class="p-2 text-stone-500 dark:text-stone-400 hover:bg-stone-100 dark:hover:bg-stone-800 rounded-full transition-colors active:scale-95 duration-200 ease-in-out">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</div>
+</nav>
+<main class="mt-20 px-4 space-y-8 max-w-2xl mx-auto">
+<!-- Meme of the Day Section -->
+<section class="sticky top-20 z-40 pt-2">
+<div class="bg-surface-container-highest rounded-xl p-4 shadow-sm border border-outline-variant/10">
+<div class="flex items-center justify-between mb-4">
+<span class="bg-tertiary-container text-on-tertiary-fixed px-3 py-1 rounded-full text-xs font-bold tracking-wide uppercase">Meme of the Day</span>
+<span class="text-xs text-on-surface-variant font-medium">Shared by @Sarah_Ops</span>
+</div>
+<div class="rounded-lg overflow-hidden mb-4 bg-surface-dim aspect-video relative">
+<img class="w-full h-full object-cover" data-alt="funny office meme showing a tired cat sitting at a tiny laptop with a coffee mug, captioned 'this meeting could have been an email', bright and humorous lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATr7buuscr3VOZZ3mxFcyInjMlFiyDGyyoMWsZ-mgN7no-_P30GcoaTkhhcj90ibe8DRaFzk15O37wwB47I4oxW_pzDv3W0zQp94Wl-JGIE1JG_UG9M8H9G3HHJHDJnJPMZuXh6h17CTOKVCzq8ph4iLYFoHY_re76eGGsNlsZYZxj-kXbnX-dDuyyOryI2ga_zQhY5dMKDVu2kXWA3y27R2t0-rmNWHwzhRlYL2Tf1vppuhboe5Y4i0BxYlwr1XEHhXAkr-MXefc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4 text-white font-headline font-bold text-lg leading-tight">
+                        When you realize it's only Tuesday.
+                    </div>
+</div>
+<div class="flex gap-3">
+<button class="flex items-center gap-2 bg-surface-container-lowest px-4 py-2 rounded-full hover:bg-white transition-all shadow-sm active:scale-95">
+<span class="text-xl">☕</span>
+<span class="font-bold text-primary">42</span>
+</button>
+<button class="flex items-center gap-2 bg-surface-container-lowest px-4 py-2 rounded-full hover:bg-white transition-all shadow-sm active:scale-95">
+<span class="text-xl">🔥</span>
+<span class="font-bold text-primary">18</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Spotted Section (Horizontal Scroll) -->
+<section>
+<div class="flex justify-between items-end mb-4 px-2">
+<h2 class="font-headline font-extrabold text-2xl tracking-tight">Spotted</h2>
+<button class="text-primary font-bold text-sm hover:underline">View All</button>
+</div>
+<div class="flex gap-4 overflow-x-auto hide-scrollbar pb-4 -mx-4 px-4 snap-x">
+<!-- Spotted Item 1 -->
+<div class="snap-start flex-none w-64 group">
+<div class="relative h-80 rounded-xl overflow-hidden mb-2">
+<img class="w-full h-full object-cover" data-alt="candid photo of a coworker taking a power nap on a colorful beanbag chair in a bright modern office lounge, warm afternoon sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRYzjh768FDLKo_cZZI3iLWNXeAiju7vOUVwHiuqQz07AjqTto9aRGH9zUvdjoTb4x3KW_7lB8tOhZtY44qtYAq2GJ7Am-Fnsmq3i5KIVPmkpRbUyX7caXnhLN0A0hwx4mVELYLEEN291a3q7iT2A3yDSeMzPtRO3YDlh6qmNntVHdqWfiOZr1U5L1D1aaAhW1CtfrXeLhkfBFJSVrrGd5p1ocLAoAdd6Yzbg_6D4HpdzjsBMJl3Om8GURZ9SQb9ExAHJS5TktZgk"/>
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/60"></div>
+<div class="absolute bottom-3 left-3 text-white">
+<p class="font-bold">Kuba sleeping</p>
+<p class="text-xs opacity-80">3 mins ago • Lounge</p>
+</div>
+</div>
+</div>
+<!-- Spotted Item 2 -->
+<div class="snap-start flex-none w-64 group">
+<div class="relative h-80 rounded-xl overflow-hidden mb-2">
+<img class="w-full h-full object-cover" data-alt="close-up of new lush green tropical plants in terracotta pots decorating a wooden office desk, vibrant and fresh office atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDh5_3U-DJ2wgW4Do2tBzbrb_dKkJvjGT2P1lblFqiA84M36C8xeXLXUOvR2jc9lWMxxzd1lu9QdVQb9QDt1M_5SROqptgj4cOP6xy9kFPVtJ7DPUdX80Xd8xHqUqfm0VkuSRa7H0HM_N1Y9UiuqCt89z5-ADok7QYty6VM9GcqEzMz5eSy7YXbGELjyMvh_erCDeeuV64ihS1_6hRIEunUGgLtS55y8jkR4Hp_WEJncCG3qj90u9P6KMvchaEQEqbqgFqIfqkG0JE"/>
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/60"></div>
+<div class="absolute bottom-3 left-3 text-white">
+<p class="font-bold">New plants!</p>
+<p class="text-xs opacity-80">1 hour ago • Reception</p>
+</div>
+</div>
+</div>
+<!-- Spotted Item 3 -->
+<div class="snap-start flex-none w-64 group">
+<div class="relative h-80 rounded-xl overflow-hidden mb-2">
+<img class="w-full h-full object-cover" data-alt="a large colorful birthday cake on a kitchen island in a modern office kitchen, people gathering in background, warm celebratory mood" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqRZ7mLINbB2qNJ4nJA9HVFtg_Vjp51SAHBS4Mate3Jkt01VcdtKiiIiSW1iaHzX2ysqwoseiEANQ97MVJhBZsJ-D3v1SnYlfOtTXmZ3jOeUJOKKOiN8CR6kGAGUECMdVEVaDI6KYlQIXcN_WmbNPMX2bj1awhb1uxTeJ2rlEGW4fyUiTqqRR7qjlbKEBAVSt4DDODT80ynP_-LT1sPgqalO8ZduBUh82rnSpUz-Fh8oLoeOLcUA7eMkj3JNKs520jp14yQZVWtZg"/>
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/60"></div>
+<div class="absolute bottom-3 left-3 text-white">
+<p class="font-bold">Cake Alert 🎂</p>
+<p class="text-xs opacity-80">2 hours ago • Kitchen</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Feed Section -->
+<section class="space-y-6">
+<!-- Feed Post 1 -->
+<article class="bg-surface-container-low rounded-lg p-6 space-y-4">
+<div class="flex items-center gap-3">
+<img alt="User avatar" class="w-12 h-12 rounded-full bg-secondary-container" data-alt="stylized illustration of a smiling woman with glasses and colorful accessories, bright and modern aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0p1-GvrB5NaxvV8if0KjEtGgv_1_sAso-JPr3Af0OcCLW_LQfgq5qbrEXY1AQbPxBSFqNYQ8pr6l5rFkZkGlVjFh5ekZ8QaMAajBdGwaC842GzbiCOx_uxU4eMjAiH57h9i2y_zAj5vOHu3lWYaOroN5a5Q4GFMo-LC1dq7y5OpnPSFUoEpynrkdnhy2fBXhp8vbEPlAgSm8COA3AdXNXr0UPJvwmMiDCc0ClzNsiAl8_iYIoXqOjg_5jWOShVJZoKzxn7JEFWKw"/>
+<div>
+<h4 class="font-bold text-lg leading-none">Jade Rivers</h4>
+<p class="text-xs text-on-surface-variant font-medium">Design Lead • 2h ago</p>
+</div>
+</div>
+<p class="text-on-surface leading-relaxed">
+                    Just finished the new design system workshop! Thanks to everyone who participated. The radiant vibes are definitely coming through. Can't wait to see how we build this out! ✨
+                </p>
+<div class="grid grid-cols-2 gap-2">
+<img class="rounded-lg h-48 w-full object-cover" data-alt="group of people collaborating around a large wooden table with colorful sticky notes and sketches, bright airy studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfkYa7-6VY9-wkaYLL9vEVQz9CumMPtqXYezg9WwRaSSXeB2A4ceNUKSKAwm7HZpE4uVdP3W8z0r7HDXTKpipJKyTV6zVLHNzGJzHTlyaNzTuT440JrvaPVHy0kypwgYMp583Os2ekWXtUZqDr_0HrcRhyhTvWrDKk81Mw1lSi0vwV061-sidYA-4D8M_rdkXCSlrpqnoiTpoi-ZicENlghxFZU7iCwCyoujeO2_iGeuTU79r0DLMecIThALl53ueunEkLwTrPwtY"/>
+<img class="rounded-lg h-48 w-full object-cover" data-alt="macro shot of colorful design swatches and pens on a clean white surface, focus on texture and vibrant colors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFdgZLvj_tiHL-sepOvq56bVgOpucpPebozq0CsN1bVMyAyxnVyM5FWl7nUfzGHhsGmj7z5J679Fbh1NOH5C-JmlDr9KDTBSLLXCY3VF8ZvKfZA19Dbh5U-vamSISjJU3EVk04ITuH_LuZWL80ylLNE28g9dlbpgHhF-fqP8JcmL3IA1ER8kCSKBSDfPakweYMNuPEwmu-heowQP9cdjreO3fxWDLokHto9xMKiPqpts-zqjfssXwT7x6FYcQhtTZnAIDwMvedJHE"/>
+</div>
+<!-- Reaction Bar -->
+<div class="flex items-center gap-2 pt-2 overflow-x-auto hide-scrollbar">
+<button class="flex items-center gap-1.5 bg-surface-container-high px-3 py-2 rounded-full hover:bg-primary-container/20 transition-colors">
+<span>☕</span><span class="font-bold text-xs">12</span>
+</button>
+<button class="flex items-center gap-1.5 bg-surface-container-high px-3 py-2 rounded-full hover:bg-primary-container/20 transition-colors">
+<span>🔥</span><span class="font-bold text-xs">24</span>
+</button>
+<button class="flex items-center gap-1.5 bg-surface-container-high px-3 py-2 rounded-full hover:bg-primary-container/20 transition-colors">
+<span>😂</span><span class="font-bold text-xs">5</span>
+</button>
+<button class="flex items-center gap-1.5 bg-surface-container-high px-3 py-2 rounded-full hover:bg-primary-container/20 transition-colors">
+<span>👀</span><span class="font-bold text-xs">8</span>
+</button>
+<button class="flex items-center gap-1.5 bg-surface-container-high px-3 py-2 rounded-full hover:bg-primary-container/20 transition-colors">
+<span>🎯</span><span class="font-bold text-xs">3</span>
+</button>
+</div>
+</article>
+<!-- Feed Post 2 -->
+<article class="bg-surface-container-low rounded-lg p-6 space-y-4">
+<div class="flex items-center gap-3">
+<img alt="User avatar" class="w-12 h-12 rounded-full bg-primary-container" data-alt="minimalist flat illustration of a bearded man with a friendly expression, soft earthy tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiUgHHwodt34csnm1jeN0jF7irTb2CovoTOHTVJRW2g8VbibI4EeZUulJRWBkY-uzQ4XPDGo_nbaOhB-MbocvdSypYHTurDf2lmLImIL5LU_XwAy_NEImOzA4z_FCrQrBVCjmChfqV7UYOGcNYfB933I2GGUuRf-tHHDPKOwiP6Ra8D4Y8ElIboEaBJeFbOwLylgTFGyjogaQhBCMX4DdCq8iPt4wgbftW1G8MvOGNlM-jdfwMwktYiv1rYVCAUC3TvUR_dtcjces"/>
+<div>
+<h4 class="font-bold text-lg leading-none">Marco Chen</h4>
+<p class="text-xs text-on-surface-variant font-medium">Senior Developer • 5h ago</p>
+</div>
+</div>
+<div class="bg-surface p-6 rounded-lg italic text-on-surface-variant border-l-4 border-primary/30">
+                    "The code is like a living room. If it's messy, nobody wants to stay. If it's clean and warm, everyone wants to contribute."
+                </div>
+<div class="flex items-center gap-2 pt-2">
+<button class="flex items-center gap-1.5 bg-surface-container-high px-3 py-2 rounded-full hover:bg-primary-container/20 transition-colors">
+<span>🔥</span><span class="font-bold text-xs">56</span>
+</button>
+<button class="flex items-center gap-1.5 bg-surface-container-high px-3 py-2 rounded-full hover:bg-primary-container/20 transition-colors">
+<span>🎯</span><span class="font-bold text-xs">31</span>
+</button>
+<button class="flex items-center gap-1.5 bg-surface-container-high px-3 py-2 rounded-full hover:bg-primary-container/20 transition-colors">
+<span>☕</span><span class="font-bold text-xs">14</span>
+</button>
+</div>
+</article>
+<!-- Feed Post 3 -->
+<article class="bg-surface-container-low rounded-lg p-6 space-y-4">
+<div class="flex items-center gap-3">
+<img alt="User avatar" class="w-12 h-12 rounded-full bg-tertiary-container" data-alt="vibrant illustration of a woman with a creative hairstyle and bright smile, energetic and friendly" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyy0nHdEvZ5OSMgcJPKInrx2sTQnhYjoUI5453YS-gtxnU5dsLBeGAAgKlVs5D7tNYFxQrZp2dPtyzvJdoF9TJd1JWFEt7KuFMZMfXqATVnlfd_mKTU7c4M4lPE8Nbmrtv5I2gzbAC6ReYm1JkYUOHUSVXJ6BDZs8aL56wHgWRpiAnAWluWJbOP7Dfi7MHZHA3sGCMQKRe1OR7nJbV7kA8FePG9zKMNgaZ3EU33sQMna5ui1Fair4kDbUJ51vs6aXxGBMeuwOOoCU"/>
+<div>
+<h4 class="font-bold text-lg leading-none">Bella Thorne</h4>
+<p class="text-xs text-on-surface-variant font-medium">Social Manager • 8h ago</p>
+</div>
+</div>
+<p class="text-on-surface leading-relaxed">
+                    Who's up for some after-office drinks at the rooftop bar today? First round of ☕ (or stronger) is on the social club! 🍹
+                </p>
+<img class="rounded-lg w-full h-64 object-cover" data-alt="aesthetic view of a rooftop lounge at dusk with fairy lights, comfortable seating, and city skyline in the background, warm and inviting vibe" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1_mhDahk3g-B0u9b4GMqdOVSkxQakkfnO0BPsoS_UgoCRoXbWim4yEL8dz-4iLrLG38X3OuCeRhL6KULVvYDmBemwrF_Hj2bV_egBCp2iSrjInPvX8QUOYw7hvP0tONKR808b9-8hj7TUOcSQGVLytf52cq740UirUuMO8flfbNdBGEMFF7Uqy9lwvID-65knjsWSAJZHGjOAQbltXONh4yr4cxsuaJmaaHcfuT5F7bji5mpN-XAx0dTfcMHfDXeVxgV_ijLXrt0"/>
+<div class="flex items-center gap-2 pt-2">
+<button class="flex items-center gap-1.5 bg-surface-container-high px-3 py-2 rounded-full hover:bg-primary-container/20 transition-colors">
+<span>🔥</span><span class="font-bold text-xs">89</span>
+</button>
+<button class="flex items-center gap-1.5 bg-surface-container-high px-3 py-2 rounded-full hover:bg-primary-container/20 transition-colors">
+<span>👀</span><span class="font-bold text-xs">42</span>
+</button>
+</div>
+</article>
+</section>
+</main>
+<!-- Floating Action Button -->
+<button class="fixed bottom-28 right-6 w-16 h-16 rounded-full bg-gradient-to-br from-[#a04223] to-[#ffad94] text-white shadow-xl flex items-center justify-center z-50 active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 0, 'wght' 600;">add</span>
+</button>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-xl bg-[#fff8f1]/80 dark:bg-stone-900/80 backdrop-blur-xl shadow-[0_-10px_40px_rgba(57,50,34,0.05)] flex justify-around items-center px-8 pb-8 pt-4 w-full">
+<a class="flex flex-col items-center justify-center bg-gradient-to-br from-[#a04223] to-[#ffad94] text-white rounded-[24px] p-3 scale-110 shadow-lg transition-all" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 p-3 hover:text-[#a04223] dark:hover:text-[#ffad94] transition-all" href="#">
+<span class="material-symbols-outlined">event</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 p-3 hover:text-[#a04223] dark:hover:text-[#ffad94] transition-all" href="#">
+<span class="material-symbols-outlined">add_circle</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 p-3 hover:text-[#a04223] dark:hover:text-[#ffad94] transition-all" href="#">
+<span class="material-symbols-outlined">person</span>
+</a>
+</nav>
+</body></html>

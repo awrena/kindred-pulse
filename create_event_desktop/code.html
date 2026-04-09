@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Create Event | We Are Still Here</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary": "#a04223",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary": "#fff8f1",
+                    "on-surface-variant": "#675e4c",
+                    "on-background": "#393222",
+                    "inverse-primary": "#fd8863",
+                    "on-secondary-fixed": "#004843",
+                    "on-secondary-container": "#005c56",
+                    "on-error": "#fff7f6",
+                    "tertiary": "#7a5a00",
+                    "surface-tint": "#a04223",
+                    "outline-variant": "#bcb19b",
+                    "tertiary-fixed": "#fec330",
+                    "secondary-fixed": "#8ef4e9",
+                    "inverse-on-surface": "#a49c8f",
+                    "on-tertiary-fixed": "#402d00",
+                    "on-primary-fixed": "#4f1200",
+                    "surface-container-high": "#f3e7d2",
+                    "on-error-container": "#65000b",
+                    "tertiary-dim": "#6b4e00",
+                    "primary-fixed": "#ffad94",
+                    "error-container": "#f56965",
+                    "outline": "#837a66",
+                    "on-primary-container": "#712003",
+                    "error": "#ac3434",
+                    "surface-bright": "#fff8f1",
+                    "error-dim": "#70030f",
+                    "background": "#fff8f1",
+                    "secondary-container": "#8ef4e9",
+                    "surface-dim": "#e6d9bf",
+                    "on-primary-fixed-variant": "#7d290b",
+                    "primary-container": "#ffad94",
+                    "tertiary-fixed-dim": "#efb520",
+                    "on-tertiary-container": "#584000",
+                    "on-secondary-fixed-variant": "#006760",
+                    "surface-container-low": "#fdf2e2",
+                    "secondary-fixed-dim": "#7fe6db",
+                    "surface-variant": "#eee1ca",
+                    "surface-container": "#f8edda",
+                    "secondary": "#006b64",
+                    "primary-dim": "#903618",
+                    "surface-container-highest": "#eee1ca",
+                    "on-surface": "#393222",
+                    "surface": "#fff8f1",
+                    "on-secondary": "#e2fffa",
+                    "tertiary-container": "#fec330",
+                    "inverse-surface": "#110e06",
+                    "primary-fixed-dim": "#ff9878",
+                    "on-tertiary-fixed-variant": "#634900",
+                    "secondary-dim": "#005e57",
+                    "on-primary": "#fff7f5"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Be Vietnam Pro"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</head>
+<body class="bg-background font-body text-on-background min-h-screen">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#fff8f1]/80 backdrop-blur-xl shadow-[0_10px_40px_rgba(57,50,34,0.05)] flex justify-between items-center px-8 h-20 w-full">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-bold text-[#a04223] font-headline tracking-tight">We Are Still Here</span>
+<div class="hidden md:flex gap-6">
+<a class="text-stone-500 hover:bg-orange-50 transition-colors duration-300 px-3 py-1 rounded-full font-label" href="#">Feed</a>
+<a class="text-[#a04223] font-bold border-b-2 border-[#a04223] px-3 py-1 font-label" href="#">Events</a>
+<a class="text-stone-500 hover:bg-orange-50 transition-colors duration-300 px-3 py-1 rounded-full font-label" href="#">People</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-orange-50 transition-colors active:scale-95 text-[#a04223]">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-2 rounded-full hover:bg-orange-50 transition-colors active:scale-95 text-[#a04223]">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<div class="h-10 w-10 rounded-full bg-primary-container overflow-hidden ring-2 ring-primary/20">
+<img alt="User profile" data-alt="close up portrait of a smiling person with a warm aesthetic, soft natural lighting and earthy tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUxtJrsM6Vio5ZMThniyVCCSffnwKbve9v7phpulToJVWYdsJez9Axl2zpIBdI9X1TCfyXDW9rQJ9Kk7zf2ZIWMb38z2dIXzbIkhF3AisBsRGt6bRfZdYmcwgLusTJOrN896KjplhWgoa4KJ-0VBvi--z1p2GmuGN2odIdXn-au0eSXjinNea3yiJXMuNwKMuEaSqouODVnBWbo_BDKnuJTp48u4OLq9DiVLjdxA2NhlmrgZo6r_PhSq_nRSOKxmsqpIsugkWEkws"/>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="pt-32 pb-20 px-6 max-w-5xl mx-auto">
+<!-- Close / Back Action -->
+<div class="mb-8 flex items-center justify-between">
+<button class="flex items-center gap-2 text-primary font-semibold hover:opacity-80 transition-all">
+<span class="material-symbols-outlined">arrow_back</span>
+<span>Back to Hub</span>
+</button>
+<div class="text-on-surface-variant font-label text-sm uppercase tracking-widest">New Gathering</div>
+</div>
+<!-- Create Event Form -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Left Side: Focused Form -->
+<div class="lg:col-span-7 space-y-12">
+<header>
+<h1 class="text-5xl md:text-6xl font-headline font-extrabold text-primary tracking-tighter leading-none mb-4">
+                        Let's get <br/>together.
+                    </h1>
+<p class="text-lg text-on-surface-variant max-w-md">Create a moment for the community. Keep it casual, keep it warm.</p>
+</header>
+<!-- Step 1: Vibe Selection -->
+<section class="space-y-6">
+<div class="flex items-center gap-4">
+<span class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold">1</span>
+<h2 class="text-2xl font-headline font-bold">What's the vibe?</h2>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+<!-- Coffee -->
+<button class="flex flex-col items-center gap-3 p-6 rounded-xl bg-surface-container hover:bg-surface-container-high transition-all border-2 border-transparent hover:border-primary/20 group">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">coffee</span>
+</div>
+<span class="font-bold text-sm">Coffee</span>
+</button>
+<!-- Lunch -->
+<button class="flex flex-col items-center gap-3 p-6 rounded-xl bg-primary-container/30 border-2 border-primary transition-all group">
+<div class="w-12 h-12 rounded-full bg-primary text-on-primary flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined active-icon">restaurant</span>
+</div>
+<span class="font-bold text-sm">Lunch</span>
+</button>
+<!-- Darts -->
+<button class="flex flex-col items-center gap-3 p-6 rounded-xl bg-surface-container hover:bg-surface-container-high transition-all border-2 border-transparent hover:border-primary/20 group">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">target</span>
+</div>
+<span class="font-bold text-sm">Darts</span>
+</button>
+<!-- Walk -->
+<button class="flex flex-col items-center gap-3 p-6 rounded-xl bg-surface-container hover:bg-surface-container-high transition-all border-2 border-transparent hover:border-primary/20 group">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">directions_walk</span>
+</div>
+<span class="font-bold text-sm">Walk</span>
+</button>
+<!-- Cake -->
+<button class="flex flex-col items-center gap-3 p-6 rounded-xl bg-surface-container hover:bg-surface-container-high transition-all border-2 border-transparent hover:border-primary/20 group">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">cake</span>
+</div>
+<span class="font-bold text-sm">Cake</span>
+</button>
+</div>
+</section>
+<!-- Step 2: Time and Place -->
+<section class="space-y-6">
+<div class="flex items-center gap-4">
+<span class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold">2</span>
+<h2 class="text-2xl font-headline font-bold">When &amp; Where?</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="block text-sm font-bold ml-4">When are we meeting?</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-primary">calendar_today</span>
+<input class="w-full bg-surface-container-highest border-none rounded-lg py-4 pl-12 pr-4 focus:ring-2 focus:ring-primary/20 transition-all font-medium" placeholder="Select date and time" type="text"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="block text-sm font-bold ml-4">Where to?</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-primary">location_on</span>
+<input class="w-full bg-surface-container-highest border-none rounded-lg py-4 pl-12 pr-4 focus:ring-2 focus:ring-primary/20 transition-all font-medium" placeholder="Add a location or spot" type="text"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Step 3: Logistics -->
+<section class="space-y-6">
+<div class="flex items-center gap-4">
+<span class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold">3</span>
+<h2 class="text-2xl font-headline font-bold">Capacity settings</h2>
+</div>
+<div class="bg-surface-container-low p-8 rounded-lg flex flex-col md:flex-row items-center gap-8">
+<div class="flex-1 space-y-1">
+<p class="font-bold text-lg">How many seats at the table?</p>
+<p class="text-sm text-on-surface-variant">Limit RSVPs to keep it intimate or leave it open for a crowd.</p>
+</div>
+<div class="flex items-center gap-4 bg-surface rounded-full p-2 shadow-sm">
+<button class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined">remove</span>
+</button>
+<span class="text-2xl font-headline font-black w-12 text-center">8</span>
+<button class="w-12 h-12 rounded-full bg-primary text-on-primary flex items-center justify-center hover:bg-primary-dim transition-colors">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</div>
+</section>
+<div class="pt-8">
+<button class="w-full h-16 bg-gradient-to-br from-primary to-primary-container text-on-primary text-xl font-headline font-black rounded-lg shadow-lg hover:shadow-primary/20 hover:-translate-y-1 transition-all active:scale-95 flex items-center justify-center gap-3">
+<span>Blast it out!</span>
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+<!-- Right Side: Preview & Context -->
+<div class="lg:col-span-5 relative">
+<div class="sticky top-32 space-y-8">
+<!-- Event Preview Card -->
+<div class="bg-surface-container p-8 rounded-xl border-4 border-dashed border-primary/10 relative overflow-hidden">
+<div class="absolute -top-12 -right-12 w-32 h-32 bg-tertiary-container rounded-full opacity-20"></div>
+<div class="relative z-10 space-y-6">
+<div class="flex justify-between items-start">
+<div class="bg-primary text-on-primary px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">Live Preview</div>
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined active-icon" style="font-variation-settings: 'FILL' 1;">restaurant</span>
+</div>
+</div>
+<div>
+<h3 class="text-3xl font-headline font-extrabold text-on-background mb-2">Community Lunch</h3>
+<div class="flex items-center gap-2 text-on-surface-variant font-medium">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span>Today, 12:30 PM</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-medium">
+<span class="material-symbols-outlined text-sm">location_on</span>
+<span>The Corner Bistro</span>
+</div>
+</div>
+<div class="pt-4 border-t border-primary/10 flex items-center justify-between">
+<div class="flex -space-x-3">
+<div class="w-10 h-10 rounded-full border-2 border-surface bg-primary-container overflow-hidden">
+<img alt="Avatar" data-alt="close up headshot of a person with stylish glasses and a cheerful expression in a brightly lit modern room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGkOn2Cgq5BL3-19qvw0Jl66Pc-Z2tnYG_79hgFyF2ueH4WJcewgeQaBK30ITBLAMApYghf1wK-yLItOxRxQwdhEz5ZOKeYVw4HmxrZ67ahCHnsXBiMFuYRxi9P4AJ9oe3XToT4ckPlwR_nSRk6yxAY7fCGGTqr8aaMPrTF4Dq6QrWYArQ8tYKgk51lFPUEEOsKkJPr5MHvbJmmv5bskm2MBXvcMDmLlLn_LjO8WgECfwoo02_57GrXYgaJXLQNTlMbvy_XX7eXnA"/>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-surface bg-secondary-container flex items-center justify-center text-xs font-bold">
+                                        +7
+                                    </div>
+</div>
+<span class="text-sm font-bold text-primary">8 spots left</span>
+</div>
+</div>
+</div>
+<!-- Map/Location Context -->
+<div class="rounded-xl overflow-hidden shadow-ambient-sm relative h-64 group">
+<img class="w-full h-full object-cover" data-alt="a stylized artistic map of a vibrant urban neighborhood with warm pastel colors and friendly iconography for local spots" data-location="Chicago" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB34HZWv7bd4pBw8Iey1f-PZ9Jq_1ileJd3-kPFYJpm4GoY4QG1cseXh3FlxLTxdvHq2IPwT0dROWdsaxBaMSIDKVp2AGwbHrDgNesc_B9Xnu8nh_BsxA7kQwlrz5R_swIPsu-Yy1Dw8oZ1PvEWcLsH190dWCn6zcH_tekvsRVio1qPsef_-jZGPegl8TOe5GyS-jTw2q5B63bpIe2ivqnzwue2An8h1jagLt8FjOTOUTduPLMdidt4-UD3_dn1uM5CbM-TrVr8B20"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent flex items-end p-6">
+<div class="bg-surface/90 backdrop-blur-md p-4 rounded-lg flex items-center gap-4 w-full">
+<div class="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined">explore</span>
+</div>
+<div class="overflow-hidden">
+<p class="text-xs font-bold text-on-surface-variant uppercase">Destination</p>
+<p class="truncate font-bold">Searching for the perfect spot...</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Tip Card -->
+<div class="bg-tertiary-container/30 p-6 rounded-lg border-2 border-tertiary-container/50">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-tertiary">lightbulb</span>
+<div class="space-y-1">
+<p class="font-bold text-on-tertiary-container">Host Tip</p>
+<p class="text-sm text-on-tertiary-container/80 leading-relaxed">Casual meetups get 40% more RSVPs when you include a specific table location in the description!</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Contextual "Vibe" Bar (Floating Sheet Style) -->
+<div class="fixed bottom-8 left-1/2 -translate-x-1/2 w-full max-w-lg px-6 z-40">
+<div class="bg-surface/80 backdrop-blur-2xl rounded-full p-4 shadow-[0_20px_50px_rgba(57,50,34,0.15)] flex items-center justify-around border border-white/20">
+<button class="flex flex-col items-center gap-1 group">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">description</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Details</span>
+</button>
+<div class="w-px h-8 bg-outline-variant/30"></div>
+<button class="flex flex-col items-center gap-1 group">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">people</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Invite</span>
+</button>
+<div class="w-px h-8 bg-outline-variant/30"></div>
+<button class="flex flex-col items-center gap-1 group">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">visibility</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Privacy</span>
+</button>
+</div>
+</div>
+</body></html>

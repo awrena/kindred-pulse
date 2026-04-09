@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary": "#a04223",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary": "#fff8f1",
+                    "on-surface-variant": "#675e4c",
+                    "on-background": "#393222",
+                    "inverse-primary": "#fd8863",
+                    "on-secondary-fixed": "#004843",
+                    "on-secondary-container": "#005c56",
+                    "on-error": "#fff7f6",
+                    "tertiary": "#7a5a00",
+                    "surface-tint": "#a04223",
+                    "outline-variant": "#bcb19b",
+                    "tertiary-fixed": "#fec330",
+                    "secondary-fixed": "#8ef4e9",
+                    "inverse-on-surface": "#a49c8f",
+                    "on-tertiary-fixed": "#402d00",
+                    "on-primary-fixed": "#4f1200",
+                    "surface-container-high": "#f3e7d2",
+                    "on-error-container": "#65000b",
+                    "tertiary-dim": "#6b4e00",
+                    "primary-fixed": "#ffad94",
+                    "error-container": "#f56965",
+                    "outline": "#837a66",
+                    "on-primary-container": "#712003",
+                    "error": "#ac3434",
+                    "surface-bright": "#fff8f1",
+                    "error-dim": "#70030f",
+                    "background": "#fff8f1",
+                    "secondary-container": "#8ef4e9",
+                    "surface-dim": "#e6d9bf",
+                    "on-primary-fixed-variant": "#7d290b",
+                    "primary-container": "#ffad94",
+                    "tertiary-fixed-dim": "#efb520",
+                    "on-tertiary-container": "#584000",
+                    "on-secondary-fixed-variant": "#006760",
+                    "surface-container-low": "#fdf2e2",
+                    "secondary-fixed-dim": "#7fe6db",
+                    "surface-variant": "#eee1ca",
+                    "surface-container": "#f8edda",
+                    "secondary": "#006b64",
+                    "primary-dim": "#903618",
+                    "surface-container-highest": "#eee1ca",
+                    "on-surface": "#393222",
+                    "surface": "#fff8f1",
+                    "on-secondary": "#e2fffa",
+                    "tertiary-container": "#fec330",
+                    "inverse-surface": "#110e06",
+                    "primary-fixed-dim": "#ff9878",
+                    "on-tertiary-fixed-variant": "#634900",
+                    "secondary-dim": "#005e57",
+                    "on-primary": "#fff7f5"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Be Vietnam Pro"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Be Vietnam Pro', sans-serif; }
+        h1, h2, h3, h4 { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#fff8f1]/80 backdrop-blur-xl shadow-[0_10px_40px_rgba(57,50,34,0.05)] flex justify-between items-center px-8 h-20 w-full">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-bold text-[#a04223] tracking-tight">We Are Still Here</span>
+<div class="hidden md:flex gap-6 items-center">
+<a class="text-[#a04223] font-bold border-b-2 border-[#a04223] h-20 flex items-center px-2" href="#">Feed</a>
+<a class="text-stone-500 hover:bg-orange-50 transition-colors duration-300 px-4 py-2 rounded-lg" href="#">Events</a>
+<a class="text-stone-500 hover:bg-orange-50 transition-colors duration-300 px-4 py-2 rounded-lg" href="#">People</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative group">
+<span class="material-symbols-outlined text-[#a04223] cursor-pointer p-2 hover:bg-orange-50 rounded-full transition-all active:scale-95">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-error rounded-full"></span>
+</div>
+<span class="material-symbols-outlined text-[#a04223] cursor-pointer p-2 hover:bg-orange-50 rounded-full transition-all active:scale-95">settings</span>
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-container">
+<img alt="User profile" data-alt="professional portrait of a smiling woman with warm lighting and a soft cream background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRSRdjg7KPG76MDJqbdoSx8TfWrWAaqTgVVuCwV95ovXfBl8kWzrhT4zJ3leU9kmu3rwbeO_jNfMd5mvujpAxCSK1PRnDxOZmTsHVEfCUCr8m60tGkaW9by8CW4g5zHyNa6cUfUUoxLpgDadlfV3FmLwgsc14VGddH3UmTb6cErUQxGnQGHzkv5ZRXJc8pOYoXv_XJ1K43-s6mcURX42INr3ZpPqfEsMQsAmwRJ0XKcZ_TmVXO_GWiDYF_mCh2b4VnNCZFAYSDLVg"/>
+</div>
+</div>
+</nav>
+<main class="pt-24 pb-12 px-8 flex gap-8 max-w-[1440px] mx-auto">
+<!-- SideNavBar (Left) -->
+<aside class="hidden lg:flex flex-col gap-6 px-6 h-screen w-72 sticky top-24 pt-4">
+<div class="flex items-center gap-3 px-2 mb-4">
+<div class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 1;">park</span>
+</div>
+<div>
+<h3 class="font-black text-primary leading-tight">Still Here</h3>
+<p class="text-xs text-stone-500 font-medium opacity-70">Internal Hub</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-4 px-4 py-3 text-primary font-bold scale-105 bg-surface-container-low rounded-xl transition-all duration-200" href="#">
+<span class="material-symbols-outlined">dynamic_feed</span>
+<span>Feed</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-stone-600 opacity-70 hover:translate-x-1 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">event_note</span>
+<span>Events</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-stone-600 opacity-70 hover:translate-x-1 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">group</span>
+<span>People</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-stone-600 opacity-70 hover:translate-x-1 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">notifications</span>
+<span>Notifications</span>
+</a>
+</nav>
+<button class="mt-4 py-4 px-6 bg-gradient-to-br from-primary to-primary-container text-white font-bold rounded-xl shadow-lg active:scale-95 transition-transform">
+                Share a Story
+            </button>
+<div class="mt-auto pb-32 flex flex-col gap-2">
+<a class="flex items-center gap-4 px-4 py-2 text-stone-500 text-sm hover:translate-x-1 transition-all" href="#">
+<span class="material-symbols-outlined text-base">help_outline</span>
+<span>Support</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-2 text-stone-500 text-sm hover:translate-x-1 transition-all" href="#">
+<span class="material-symbols-outlined text-base">lock_open</span>
+<span>Privacy</span>
+</a>
+</div>
+</aside>
+<!-- Central Feed Column -->
+<div class="flex-1 max-w-2xl space-y-8">
+<!-- Meme of the Day Card -->
+<section class="bg-surface-container-highest rounded-xl p-1 overflow-hidden">
+<div class="bg-surface-container-lowest rounded-[2.8rem] p-6 shadow-sm">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary">star</span>
+<span class="font-bold text-sm text-tertiary uppercase tracking-widest">Meme of the Day</span>
+</div>
+<span class="text-xs text-on-surface-variant font-medium">Curated by Community</span>
+</div>
+<div class="rounded-lg overflow-hidden mb-4 aspect-[16/9]">
+<img class="w-full h-full object-cover" data-alt="funny office cat wearing glasses and sitting at a laptop with a focused expression, warm lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDP58QcHnW-6sELmJTmwtog7wItxZ-uKxb0VZ_-YtpXTqGlCIfIT61_eMdh5VoAQmKtE_IOk6WASFNykSHXEHDeEAw9c-W1mMjLXJx3LIT0NlLJQDVuQUO-IKxTYwAGEe_iX1mRjVHdqnQlPVyJadNVdWfL2O4ZuE7gIqtZacY2GPpDqk7vskdvUjol17zvbHqljo-y78cMVqLf8wVeZ5VAN17NG8FNpc0O1t3GuIY3Hhe-xrfhHDSCJIt_7kXtVz9Yu63AEczFfsg"/>
+</div>
+<h3 class="text-xl font-bold mb-2">When the 4:00 PM meeting could have been an email...</h3>
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-tertiary-container text-on-tertiary-container text-xs font-bold rounded-full">😂 128</span>
+<span class="px-3 py-1 bg-surface-container text-on-surface-variant text-xs font-bold rounded-full">Relatable</span>
+</div>
+</div>
+</section>
+<!-- Spotted Section (Horizontal Scroll) -->
+<section>
+<div class="flex items-center justify-between px-2 mb-4">
+<h2 class="text-2xl font-bold">Spotted Around</h2>
+<button class="text-primary font-bold text-sm">View all</button>
+</div>
+<div class="flex gap-4 overflow-x-auto pb-4 no-scrollbar -mx-2 px-2">
+<div class="flex-none w-48 group">
+<div class="relative h-64 rounded-xl overflow-hidden mb-2 shadow-sm transition-transform duration-300 group-hover:scale-[1.02]">
+<img class="w-full h-full object-cover" data-alt="cozy office coffee corner with plants and warm ambient lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKOLweMtKkp9Q7dL38Dto6Zp2G_74yrSja0ayObWGFHFeE6zCoZ8bg-meJreUVQX8RywkTD7JRIPAI1EevcMOoJhHcx2-bzepc4NEZdRq4RRPwOo9c06qU_-ob5UMEFqb4ZRl1mq3Y0FZ25u1cblvd14DK50dG5guBaWui4kDXtoZnZvXyN955vAV8QLH7mOrLKR0rnwicdxC__EtKJrVFEvkJ_XdP8U6dBCgUoLDVrp_jmZpLEx8_AeKfrDD-ZP0D_RY3tC8x6_4"/>
+<div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/60 to-transparent">
+<p class="text-white text-xs font-bold">The Breakroom</p>
+</div>
+</div>
+<p class="text-sm font-semibold truncate px-1">Fresh cookies are out!</p>
+</div>
+<div class="flex-none w-48 group">
+<div class="relative h-64 rounded-xl overflow-hidden mb-2 shadow-sm transition-transform duration-300 group-hover:scale-[1.02]">
+<img class="w-full h-full object-cover" data-alt="modern collaborative workspace with bright natural light and colorful furniture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAY-5iAJZK1XwwF4UZIpefX6afmyOv_ukzAHDvNj9dTJG6UCXiZCyE30TNNc7sZQMfeJyVzazeRiXJD0ZayrZ97Yl5232f2VVEaBCe2dCZiXdnf7w8RXc_ifaR0HFcumrOBWtNHABobpuXBK2Wl7E134GBHfq5CMv1UoA0bWp_nNuaF9EOp3bV0mtWdBQJ3edy5GlCM5y6LiiCsblgIC_F19u-u1e1oE8u8f_nq8VfMUvishzbK02VQEYRqjbJ3Xw3h0NbmXZc7lok"/>
+<div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/60 to-transparent">
+<p class="text-white text-xs font-bold">Design Lab</p>
+</div>
+</div>
+<p class="text-sm font-semibold truncate px-1">Brainstorming session underway</p>
+</div>
+<div class="flex-none w-48 group">
+<div class="relative h-64 rounded-xl overflow-hidden mb-2 shadow-sm transition-transform duration-300 group-hover:scale-[1.02]">
+<img class="w-full h-full object-cover" data-alt="team working together on a big table with sketches and laptops in a sunny room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIYpGCa7aEAEfniCJKPJ99aTmzd4u3ii1RzKQMKr_irBsKIIp1U60LymBOj785mBWuhz1LjJZV9bBoQ1CNZdicc8zMMRIMv0xcGApBKiOtznAj-SJrIBVi49NWwSgao72760wzw822CTcphyVSd6gcaYWgHINCq-WN65XDgn5ak3t-YtJUcPQRkrS5GnzOFNHXM4aF1kVr7aiZ3iJK3jbXKMrf1pXz9sf8EnUJkGj5mDSomMeIYR-ikcxQlIDJL0z7jcZuHgafZt8"/>
+<div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/60 to-transparent">
+<p class="text-white text-xs font-bold">Main Plaza</p>
+</div>
+</div>
+<p class="text-sm font-semibold truncate px-1">New project kickoff!</p>
+</div>
+</div>
+</section>
+<!-- Regular User Post -->
+<article class="bg-surface-container-low rounded-xl p-8 space-y-6">
+<div class="flex items-center gap-4">
+<img class="w-12 h-12 rounded-xl object-cover" data-alt="portrait of a young man with a friendly smile and warm outdoor lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdft1qUNyTzrPkF6RaqyTxAU_DMBFM9cfUcI8sXI6I1kFKse9RY0XQSbkAKPfydPTlaQzw039QpLQB_fvIfwsgdngR39LIGB-qrUX4MqAWEL_VK0Bf2nW_Tybbf7zXTaQmla71Qe6XaFrJrOIBJNzjl4-M9B_5jUqU_QN7ROrA3IAhVZV-rfpVsKZ1WJASkRyK8y2H3i12UtCjGXKAlsklJBhL3gX0gtrtB2Tilks7c6zQWOhSHi6yKtgPgtmhbhn6NpSqpIQLf2s"/>
+<div>
+<h4 class="font-bold text-on-surface">Alex Rivero</h4>
+<p class="text-xs text-on-surface-variant font-medium">Shared a story • 2h ago</p>
+</div>
+<button class="ml-auto material-symbols-outlined text-stone-400">more_horiz</button>
+</div>
+<p class="text-on-surface leading-relaxed text-lg">
+                    Just finished the new branding module. The "Radiant Living Room" concept really hit home for me today. Who's around for a quick catchup?
+                </p>
+<div class="rounded-xl overflow-hidden shadow-sm">
+<img class="w-full" data-alt="abstract artistic background with warm amber and cream tones and soft textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4Re6MKDGLjAQ1jNl_eMOdHxf_OdvVPgZJKSCzgSnXOoF2mG2xd8jy_XA-7kIv9RgUbxbQ1CV2C3bG-VnPlRAPbLo7eCUZ2GYWe54F71GHXKUOQA6qok019Txn3SlePqZRUio58x3H5R6Txu6hLKFm2VHzP48hh0V39YNNOkHAZHy2DoRYrl0Ki2mEpF3eo9PhDNbFG_T0wt26pYgLJM8rrnasGLHZh_DEkhw2sd9RpWP-qnOK-2Bpqc44cw-nr4YeoDduRhWI4IQ"/>
+</div>
+<!-- Custom Reactions -->
+<div class="flex flex-wrap gap-2 pt-4 border-t border-surface-container-high/30">
+<button class="flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-highest text-on-surface-variant text-sm font-bold hover:scale-105 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-base">coffee</span> Coffee
+                    </button>
+<button class="flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-highest text-on-surface-variant text-sm font-bold hover:scale-105 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-base">local_fire_department</span> Hot
+                    </button>
+<button class="flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-highest text-on-surface-variant text-sm font-bold hover:scale-105 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-base">mood</span> Meme
+                    </button>
+<button class="flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-highest text-on-surface-variant text-sm font-bold hover:scale-105 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-base">visibility</span> Watching
+                    </button>
+<button class="flex items-center gap-2 px-5 py-2 rounded-full bg-secondary-container text-on-secondary-container text-sm font-bold hover:scale-105 active:scale-95 transition-all ml-auto">
+<span class="material-symbols-outlined text-base">person_add</span> Join me
+                    </button>
+</div>
+</article>
+<!-- Another Post (Text Only) -->
+<article class="bg-surface-container rounded-xl p-8 space-y-4">
+<div class="flex items-center gap-4">
+<img class="w-12 h-12 rounded-xl object-cover" data-alt="portrait of a woman with curly hair looking thoughtful in natural window light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIGaKIGtoBhlZjN5qizvfXXNCK5AQH-QlRcmR1b4iaslhC87c8ENJI67oBClElgscPVNJpUT34blleOL8yUqprdxOSntE1PDssyF-HPF-lnWxA8X7AlC7-8EfAaSQmrsxRUX237C0e_vBzOm_vGp_qVp9hRD9hPkrVxnWNBJq7rg1YwErQ6dNhGDLVQpycVQ8hkpTlOuUNqvJinZ2hE241Un12ppYFTnCGPI28Ap9e_wSlSqRgpltOCzQ5O7m0Nigx0l3VlGwK6rU"/>
+<div>
+<h4 class="font-bold text-on-surface">Maya Chen</h4>
+<p class="text-xs text-on-surface-variant font-medium">Asking for help • 4h ago</p>
+</div>
+</div>
+<p class="text-on-surface-variant leading-relaxed italic text-xl font-headline">
+                    "Sometimes the best ideas happen when you aren't trying to have them."
+                </p>
+<div class="flex gap-2 pt-2">
+<button class="flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-low text-on-surface-variant text-sm font-bold">
+<span class="material-symbols-outlined text-base">favorite</span> 12
+                    </button>
+<button class="flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-low text-on-surface-variant text-sm font-bold">
+<span class="material-symbols-outlined text-base">chat_bubble</span> 3
+                    </button>
+</div>
+</article>
+</div>
+<!-- Right Sidebar (Ad-hoc Events) -->
+<aside class="hidden xl:block w-80 space-y-6 sticky top-24 h-fit">
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm border border-outline-variant/10">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-secondary">bolt</span>
+<h2 class="text-lg font-bold">Happening Now</h2>
+</div>
+<div class="space-y-4">
+<!-- Event 1 -->
+<div class="p-4 rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-colors">
+<div class="flex justify-between items-start mb-2">
+<span class="material-symbols-outlined text-primary-dim">coffee</span>
+<span class="text-[10px] font-black uppercase text-on-secondary-container bg-secondary-container px-2 py-0.5 rounded">Active</span>
+</div>
+<h4 class="font-bold text-sm mb-1">Coffee at the machine</h4>
+<p class="text-xs text-on-surface-variant mb-4">Level 3 West • 4 people joined</p>
+<button class="w-full py-2 bg-primary text-on-primary text-xs font-bold rounded-lg active:scale-95 transition-transform">Join</button>
+</div>
+<!-- Event 2 -->
+<div class="p-4 rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-colors">
+<div class="flex justify-between items-start mb-2">
+<span class="material-symbols-outlined text-primary-dim">sports_esports</span>
+<span class="text-[10px] font-black uppercase text-stone-400 bg-stone-100 px-2 py-0.5 rounded">Starts in 5m</span>
+</div>
+<h4 class="font-bold text-sm mb-1">Darts now</h4>
+<p class="text-xs text-on-surface-variant mb-4">The Attic • 2 people joined</p>
+<button class="w-full py-2 bg-surface-container-highest text-on-surface text-xs font-bold rounded-lg active:scale-95 transition-transform">Join</button>
+</div>
+<!-- Event 3 -->
+<div class="p-4 rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-colors">
+<div class="flex justify-between items-start mb-2">
+<span class="material-symbols-outlined text-primary-dim">restaurant</span>
+<span class="text-[10px] font-black uppercase text-stone-400 bg-stone-100 px-2 py-0.5 rounded">Upcoming</span>
+</div>
+<h4 class="font-bold text-sm mb-1">Quick Lunch Run</h4>
+<p class="text-xs text-on-surface-variant mb-4">Meet at Main Lobby • 6 people joined</p>
+<button class="w-full py-2 bg-surface-container-highest text-on-surface text-xs font-bold rounded-lg active:scale-95 transition-transform">Join</button>
+</div>
+</div>
+<button class="w-full mt-6 flex items-center justify-center gap-2 py-3 text-sm font-bold text-primary border-2 border-primary/20 rounded-lg hover:bg-primary/5 transition-colors">
+<span class="material-symbols-outlined text-base">add</span>
+                    Start Something
+                </button>
+</div>
+<!-- Community Stats -->
+<div class="bg-gradient-to-br from-secondary/10 to-primary/10 rounded-xl p-6 text-center">
+<p class="text-xs font-bold text-on-surface-variant uppercase tracking-widest mb-2">Community Pulse</p>
+<div class="text-3xl font-black text-primary mb-1">242</div>
+<p class="text-xs text-stone-500 font-medium">Humans currently together</p>
+</div>
+</aside>
+</main>
+<!-- Create FAB (Floating Action Button) -->
+<button class="fixed bottom-8 right-8 w-16 h-16 bg-gradient-to-br from-primary to-primary-container text-on-primary rounded-xl shadow-[0_20px_50px_rgba(160,66,35,0.3)] flex items-center justify-center group active:scale-90 transition-all duration-300">
+<span class="material-symbols-outlined text-3xl transition-transform group-hover:rotate-90">add</span>
+</button>
+</body></html>

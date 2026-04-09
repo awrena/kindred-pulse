@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Event Details - We Are Still Here</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#a04223",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary": "#fff8f1",
+                        "on-surface-variant": "#675e4c",
+                        "on-background": "#393222",
+                        "inverse-primary": "#fd8863",
+                        "on-secondary-fixed": "#004843",
+                        "on-secondary-container": "#005c56",
+                        "on-error": "#fff7f6",
+                        "tertiary": "#7a5a00",
+                        "surface-tint": "#a04223",
+                        "outline-variant": "#bcb19b",
+                        "tertiary-fixed": "#fec330",
+                        "secondary-fixed": "#8ef4e9",
+                        "inverse-on-surface": "#a49c8f",
+                        "on-tertiary-fixed": "#402d00",
+                        "on-primary-fixed": "#4f1200",
+                        "surface-container-high": "#f3e7d2",
+                        "on-error-container": "#65000b",
+                        "tertiary-dim": "#6b4e00",
+                        "primary-fixed": "#ffad94",
+                        "error-container": "#f56965",
+                        "outline": "#837a66",
+                        "on-primary-container": "#712003",
+                        "error": "#ac3434",
+                        "surface-bright": "#fff8f1",
+                        "error-dim": "#70030f",
+                        "background": "#fff8f1",
+                        "secondary-container": "#8ef4e9",
+                        "surface-dim": "#e6d9bf",
+                        "on-primary-fixed-variant": "#7d290b",
+                        "primary-container": "#ffad94",
+                        "tertiary-fixed-dim": "#efb520",
+                        "on-tertiary-container": "#584000",
+                        "on-secondary-fixed-variant": "#006760",
+                        "surface-container-low": "#fdf2e2",
+                        "secondary-fixed-dim": "#7fe6db",
+                        "surface-variant": "#eee1ca",
+                        "surface-container": "#f8edda",
+                        "secondary": "#006b64",
+                        "primary-dim": "#903618",
+                        "surface-container-highest": "#eee1ca",
+                        "on-surface": "#393222",
+                        "surface": "#fff8f1",
+                        "on-secondary": "#e2fffa",
+                        "tertiary-container": "#fec330",
+                        "inverse-surface": "#110e06",
+                        "primary-fixed-dim": "#ff9878",
+                        "on-tertiary-fixed-variant": "#634900",
+                        "secondary-dim": "#005e57",
+                        "on-primary": "#fff7f5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Be Vietnam Pro"],
+                        "label": ["Be Vietnam Pro"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background-color: #fff8f1;
+            color: #393222;
+        }
+        h1, h2, h3 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .editorial-shadow {
+            box-shadow: 0 10px 40px rgba(57, 50, 34, 0.05);
+        }
+        .glass-nav {
+            background: rgba(255, 248, 241, 0.8);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="antialiased">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 glass-nav shadow-[0_10px_40px_rgba(57,50,34,0.05)] flex justify-between items-center px-8 h-20">
+<div class="text-2xl font-bold text-[#a04223] tracking-tight font-['Plus_Jakarta_Sans']">
+            We Are Still Here
+        </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-stone-500 hover:bg-orange-50 transition-colors duration-300 px-4 py-2 rounded-lg" href="#">Feed</a>
+<a class="text-[#a04223] font-bold border-b-2 border-[#a04223] px-4 py-2" href="#">Events</a>
+<a class="text-stone-500 hover:bg-orange-50 transition-colors duration-300 px-4 py-2 rounded-lg" href="#">People</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-stone-500 hover:bg-orange-50 rounded-full transition-all active:scale-95">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 text-stone-500 hover:bg-orange-50 rounded-full transition-all active:scale-95">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+<div class="h-10 w-10 rounded-full bg-primary-container flex items-center justify-center overflow-hidden border-2 border-primary-fixed">
+<img alt="User profile" class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFsCdg_lTXx0b-I0mqH8gO-C3NqaJvn9fjGBk__CrU5JAncGR5ZaYr1HGEMyWw24j4rHaICMxc3hVRtEFRGyv9O_HAlSozOJQuaivHI2i8lpMWWSS8cS7i9jlPsmTRo2lumTU34RIzcBJMbcSLjA6FX4umT0ohVrDP2pHBN9oEJbOyvl2S0P8Taidms6FB37lVl_qHkkl8szfW9ArHAYL2SunPMZ5CiXm26z8feSuMKpY2q_hiwyAjEs0hcqoiaf5gU9pQRR3AErg"/>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-20 max-w-7xl mx-auto px-8">
+<!-- Hero Section -->
+<div class="relative w-full h-[500px] rounded-xl overflow-hidden mb-12 shadow-2xl">
+<img class="w-full h-full object-cover" data-alt="Sun-drenched modern cafe interior with steam rising from a coffee machine and warm morning light filtering through large windows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBl9t8TrAGz0lTPgwUzLCtdOeRvNznQid9py-eZSwb6zy_laZ61_tkoJ7Vvf1PCl37oSR-LOjvqK3dQiQsVRYIlXxDMKlJujpxMzW5xwxKirvsbseuj6B8TR8gBRlVW0xFQLUlr-d9smkt0GSmgPjTP09g1CnjqbAjJ78Ko8LJ1VpTuVZPRE2TFODeW2itH_PQ5-xm3ZrqHS_pPDxCnI77iWb6ZORhb2HBltusJSO3GYWC85kezDsU7P8v_OI84emDAZPMUUhoJIoc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#393222]/80 to-transparent flex flex-col justify-end p-12">
+<div class="flex gap-3 mb-4">
+<span class="bg-tertiary-container text-on-tertiary-container px-4 py-1.5 rounded-full text-sm font-bold tracking-wide uppercase">Community Event</span>
+<span class="bg-secondary-container text-on-secondary-container px-4 py-1.5 rounded-full text-sm font-bold tracking-wide uppercase">4 Spots Left</span>
+</div>
+<h1 class="text-white text-6xl font-extrabold tracking-tight mb-4">Coffee at the machine</h1>
+<p class="text-white/90 text-xl max-w-2xl font-medium">A spontaneous gathering for morning energy, casual shop talk, and the perfect roast. No agenda, just vibes.</p>
+</div>
+</div>
+<!-- Content Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+<!-- Left & Middle Column (Main Content) -->
+<div class="lg:col-span-2 space-y-12">
+<!-- Quick Info Bento -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-surface-container-low p-8 rounded-lg space-y-3">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="schedule">schedule</span>
+<h3 class="font-bold text-lg">Starting Time</h3>
+<p class="text-on-surface-variant font-medium">Tuesday, 09:30 AM</p>
+</div>
+<div class="bg-surface-container-low p-8 rounded-lg space-y-3">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="location_on">location_on</span>
+<h3 class="font-bold text-lg">Location</h3>
+<p class="text-on-surface-variant font-medium">Main Lobby, Coffee Bar</p>
+</div>
+<div class="bg-surface-container-low p-8 rounded-lg space-y-3">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="mood">mood</span>
+<h3 class="font-bold text-lg">Vibe Check</h3>
+<p class="text-on-surface-variant font-medium">High Energy, Social</p>
+</div>
+</div>
+<!-- Story/Details Section -->
+<div class="bg-surface p-10 rounded-xl editorial-shadow border border-outline-variant/10">
+<h2 class="text-3xl font-bold mb-6 text-on-background">What to expect</h2>
+<div class="space-y-6 text-lg leading-relaxed text-on-surface-variant">
+<p>We believe the best ideas don't happen in meeting rooms; they happen around the coffee machine. "Coffee at the machine" is our informal ritual to reconnect after the weekend.</p>
+<p>Whether you're a flat white enthusiast or a strictly black coffee person, come by for a 15-minute reset. We'll be trying out a new local roast from the Highlands this week.</p>
+<div class="grid grid-cols-2 gap-4 mt-8">
+<img class="rounded-lg h-64 w-full object-cover" data-alt="Close up of a barista pouring latte art in a warm ceramic cup with dramatic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBm7xw0wR5U-T-kyp9OmtKubyZEDoyVPzbVJ4wEDoT9qsXVBaSFFmi2HGK3RCB4TiAT28KLMI15jsHe5Xb9Ro_bETB6OcAksh8Ye1ndiuBfBZOMum7kEEK9ndViWWatdmgbPMmzuCR8lD9uKwbVwZSgRjdbAjTpsQfAWCJfwBH2knJGpwUJLfOHqpNzfSFA6thlL6Lr2LBEuwxHX-bER0WsWY02seRLV_IVovbZeOgjKWKVwj0QoEdo0LPq4Y4i5Hct-QJSKLh7d0"/>
+<img class="rounded-lg h-64 w-full object-cover" data-alt="Blurred background of a busy office lobby with warm wood textures and people chatting near a coffee bar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaTK5-fkdnDn1FEma54hr9LyxRFk1yOHG9oYC_6P5b_QXPC-f6QNwRemfeZEle9-s5otfYvhGpAzNDgz_TE_EIIryrQU2Orn62fkGg8EEHkx0uSSsBiFkGSsBJ5uFgw2dH2UmU1qXdEQIeyrzWB3xrx27duixepc7cPtOgOscjrr93q-KBqGzJXpKDT7vlSCUP3dh82iVbhIdif_aKRDc4n8unlkgW9kHLnQdcympzwMbQE5YDAfS9G_1v5LHwunklC4jvJu0CsF4"/>
+</div>
+</div>
+</div>
+<!-- Attendees Section -->
+<div class="space-y-8">
+<div class="flex justify-between items-end">
+<h2 class="text-3xl font-bold text-on-background">Who's already here?</h2>
+<span class="text-primary font-bold">12 People Attending</span>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-6">
+<!-- User Card 1 -->
+<div class="flex flex-col items-center p-6 bg-surface-container rounded-lg transition-transform hover:scale-105">
+<div class="w-20 h-20 rounded-xl overflow-hidden mb-4 shadow-md">
+<img alt="Alex's avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXeMflvHLxeJOSG4_bdi4YiW49j-0imAOqB9xmebXjmdZvx1P8c5STKwfYHAhNaRqhFSzxjnYojA1sU0t8dKdQYEbnfMrbV_KTXtnz-PWhvJ6qsNw8Hve99gRMAOtnkRKLRv0U-CZqHEyUOBaMjHJEeoIzF1ASf4Izi4A3uf9QfY2tM43lZPseoFtEy5b0DwcgXrWoi0R0nJ1L_eLhXwipkiZhXolZTA17jA1flhR4beKh6E3lMMgqh4qoQUfnkdunCWSiad1hytc"/>
+</div>
+<span class="font-bold">Alex Rivera</span>
+<span class="text-xs text-on-surface-variant uppercase tracking-wider">Product Design</span>
+</div>
+<!-- User Card 2 -->
+<div class="flex flex-col items-center p-6 bg-surface-container rounded-lg transition-transform hover:scale-105">
+<div class="w-20 h-20 rounded-xl overflow-hidden mb-4 shadow-md">
+<img alt="Maya's avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbfgbYorMQdwWvkBz3m49mKBkZrjijl-g4mNEOLcJmC7qGxxIIDudawJIwsK6jcQ-bRCiLkTWzve9xKLk-deoiTvpKeD0CnyuvOM972I57AzitQQEXpUASIpa4VcsneKTUPv21G6vLSTjnnSl1DzL6vfyg8zdBGbL5jFncaZnDJlcsSIrHy3QAiwtHt2-z3R-ReajnkfLXfIAMlKOe1xgVJWt7glKZ1X0xsDkg7R0YEHeDzQ6qgt6fLClfRH7xpFuztFXqR_JN-Zg"/>
+</div>
+<span class="font-bold">Maya Chen</span>
+<span class="text-xs text-on-surface-variant uppercase tracking-wider">Engineering</span>
+</div>
+<!-- User Card 3 -->
+<div class="flex flex-col items-center p-6 bg-surface-container rounded-lg transition-transform hover:scale-105">
+<div class="w-20 h-20 rounded-xl overflow-hidden mb-4 shadow-md">
+<img alt="Jordan's avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDx9QoW_oV8uUsm0OX4V3z-cVBUAbolzQYpfGcLf80sVv0ReIVgNGcFXAs2uls0q721r1UIAUhlzaq0QV7ForoO5pYwr5DQzReAbJh88UkrUqG6hxjiDSEbFuInJoE8igUI4HOJP2WS4P0KMeBrU9hMUnjlOzfyYS0igyVX_JKl02_kjndNxqjU6fqbogf7jl8V3TTpeUQLZ5NpOKmhPOI_5Xq3Perh7qEd0SDRoLLEoFLv7_I_J5xgDJqTxgxb26Jru2dJBrJrgL0"/>
+</div>
+<span class="font-bold">Jordan Lee</span>
+<span class="text-xs text-on-surface-variant uppercase tracking-wider">Marketing</span>
+</div>
+<!-- User Card 4 -->
+<div class="flex flex-col items-center p-6 bg-surface-container rounded-lg transition-transform hover:scale-105">
+<div class="w-20 h-20 rounded-xl overflow-hidden mb-4 shadow-md">
+<img alt="Sam's avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcEMo9PlTOTvY04oyNsKBMmOT1TCQjlxTJ-AStcrJ_DxqMDcaGxuOpHXk7nDPK5BC0zLEMzeTRoG8phCusDo259eHkRvPdMtmYOOm3dcwT_49glxiExJ1VpPG55m3wVR-vGYKOwHVAqMKfQko_g3zWLUWh2bT_j_thoh3IsVWTHtONjx6VOr8FQx7_fDDe-hlqhWRj1gvacs6BgUbW0byF4-SfEG7h4ToEdGx0mEcxo9RKZE5Q9k2DTbuOK_s0rmsavayab7i2tA0"/>
+</div>
+<span class="font-bold">Sam Wilson</span>
+<span class="text-xs text-on-surface-variant uppercase tracking-wider">Strategy</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column (Sidebar CTA) -->
+<div class="lg:col-span-1">
+<div class="sticky top-32 space-y-6">
+<!-- CTA Card -->
+<div class="bg-surface-container-high p-8 rounded-xl editorial-shadow border border-primary/5">
+<div class="flex items-center gap-4 mb-8">
+<div class="bg-primary-container p-3 rounded-full">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="confirmation_number">confirmation_number</span>
+</div>
+<div>
+<h3 class="text-2xl font-bold">Secure a spot</h3>
+<p class="text-on-surface-variant">Hurry, only 4 left!</p>
+</div>
+</div>
+<ul class="space-y-4 mb-10">
+<li class="flex items-center gap-3 text-on-surface">
+<span class="material-symbols-outlined text-secondary" data-icon="check_circle">check_circle</span>
+<span>Free Ethiopian Roast</span>
+</li>
+<li class="flex items-center gap-3 text-on-surface">
+<span class="material-symbols-outlined text-secondary" data-icon="check_circle">check_circle</span>
+<span>Networking Opportunity</span>
+</li>
+<li class="flex items-center gap-3 text-on-surface">
+<span class="material-symbols-outlined text-secondary" data-icon="check_circle">check_circle</span>
+<span>Morning Pastries included</span>
+</li>
+</ul>
+<button class="w-full h-16 bg-gradient-to-br from-[#a04223] to-[#ffad94] text-white rounded-lg font-extrabold text-xl shadow-lg hover:shadow-primary/20 transition-all active:scale-95 flex items-center justify-center gap-3 mb-4">
+                            I'M IN! <span class="text-2xl">🎯</span>
+</button>
+<p class="text-center text-xs text-on-surface-variant font-medium">Joining confirms your participation and adds this to your internal calendar.</p>
+</div>
+<!-- Map/Location Shortcut -->
+<div class="bg-surface-container-low p-6 rounded-lg">
+<div class="flex items-center justify-between mb-4">
+<h4 class="font-bold">Where to meet?</h4>
+<span class="text-primary text-sm font-bold cursor-pointer">Open Maps</span>
+</div>
+<div class="w-full h-40 bg-surface-dim rounded-lg overflow-hidden grayscale hover:grayscale-0 transition-all cursor-crosshair">
+<img alt="Map of the office location" class="w-full h-full object-cover" data-location="San Francisco" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC24OYYQQvkPkUDVM_jP3K4vyOY_le1uv9MlGxXXNOyApYZDq1YUFK5tcw_xrezDMh3fKXNwhza34iktJLxFAKZ83ORpGjie7WaXiV_e07u9UBwTrNwA9bx1QOJvuJ-aUwVVpc-LZ2QfDyWmqG5XrQpmUVyxzePhIMF0EpUvqd5aKbG9TY3OdgdHKFjdneYogeE7-l-Gd2Xy9BJuvYC8bwSkm--ov0aY54FvwgNdhKPKzreLSg7mx4oYxrb4n5l6iLn4iEfCRYzdfw"/>
+</div>
+</div>
+<!-- Host Info -->
+<div class="bg-white/50 backdrop-blur-sm p-6 rounded-lg flex items-center gap-4">
+<img alt="Host avatar" class="w-12 h-12 rounded-full border-2 border-primary-container" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgxBiDRn3e0IvcEDCvCWXvvh0GA8PhYv55GijQ9El5KqqfZ-RQKkOwY7TL9FOE3ZYfo2wMcqBN5FOPkpIZ-szBiqeeOSSFuBu1ngF_ttGMOh31TA-lrHDlhHXcHzUKraHZ9NQSqbjQugB9b9m7948XRIJ1PvESASd-1_O0sKde2gVEuV_V6IBB91R-VLZYyFQbOEPdocq902uIzsiBv8KCLEdC8lhczdekgBQ0WwsjGrzZKtkbupDFREG_OH13Yt7lFk1fCXiwfsg"/>
+<div>
+<p class="text-xs text-on-surface-variant font-bold uppercase tracking-widest">Hosted By</p>
+<p class="font-bold text-on-background">The Happiness Team</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Contextual FAB (Hidden on detail, but keeping for logic) -->
+<!-- Suppressed per instructions for Details screens -->
+</body></html>

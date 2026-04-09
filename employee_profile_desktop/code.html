@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Employee Profile - We Are Still Here</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "primary": "#a04223",
+                "surface-container-lowest": "#ffffff",
+                "on-tertiary": "#fff8f1",
+                "on-surface-variant": "#675e4c",
+                "on-background": "#393222",
+                "inverse-primary": "#fd8863",
+                "on-secondary-fixed": "#004843",
+                "on-secondary-container": "#005c56",
+                "on-error": "#fff7f6",
+                "tertiary": "#7a5a00",
+                "surface-tint": "#a04223",
+                "outline-variant": "#bcb19b",
+                "tertiary-fixed": "#fec330",
+                "secondary-fixed": "#8ef4e9",
+                "inverse-on-surface": "#a49c8f",
+                "on-tertiary-fixed": "#402d00",
+                "on-primary-fixed": "#4f1200",
+                "surface-container-high": "#f3e7d2",
+                "on-error-container": "#65000b",
+                "tertiary-dim": "#6b4e00",
+                "primary-fixed": "#ffad94",
+                "error-container": "#f56965",
+                "outline": "#837a66",
+                "on-primary-container": "#712003",
+                "error": "#ac3434",
+                "surface-bright": "#fff8f1",
+                "error-dim": "#70030f",
+                "background": "#fff8f1",
+                "secondary-container": "#8ef4e9",
+                "surface-dim": "#e6d9bf",
+                "on-primary-fixed-variant": "#7d290b",
+                "primary-container": "#ffad94",
+                "tertiary-fixed-dim": "#efb520",
+                "on-tertiary-container": "#584000",
+                "on-secondary-fixed-variant": "#006760",
+                "surface-container-low": "#fdf2e2",
+                "secondary-fixed-dim": "#7fe6db",
+                "surface-variant": "#eee1ca",
+                "surface-container": "#f8edda",
+                "secondary": "#006b64",
+                "primary-dim": "#903618",
+                "surface-container-highest": "#eee1ca",
+                "on-surface": "#393222",
+                "surface": "#fff8f1",
+                "on-secondary": "#e2fffa",
+                "tertiary-container": "#fec330",
+                "inverse-surface": "#110e06",
+                "primary-fixed-dim": "#ff9878",
+                "on-tertiary-fixed-variant": "#634900",
+                "secondary-dim": "#005e57",
+                "on-primary": "#fff7f5"
+            },
+            "borderRadius": {
+                "DEFAULT": "1rem",
+                "lg": "2rem",
+                "xl": "3rem",
+                "full": "9999px"
+            },
+            "fontFamily": {
+                "headline": ["Plus Jakarta Sans"],
+                "body": ["Be Vietnam Pro"],
+                "label": ["Be Vietnam Pro"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Be Vietnam Pro', sans-serif; background-color: #fff8f1; color: #393222; }
+        .font-headline { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-nav { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#fff8f1]/80 dark:bg-stone-900/80 backdrop-blur-xl shadow-[0_10px_40px_rgba(57,50,34,0.05)] flex justify-between items-center px-8 h-20 w-full">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-bold text-[#a04223] dark:text-[#ffad94] font-headline tracking-tight">We Are Still Here</span>
+<div class="hidden md:flex gap-6 items-center">
+<a class="text-stone-500 dark:text-stone-400 hover:bg-orange-50 dark:hover:bg-stone-800 transition-colors duration-300 px-4 py-2 rounded-lg font-medium" href="#">Feed</a>
+<a class="text-stone-500 dark:text-stone-400 hover:bg-orange-50 dark:hover:bg-stone-800 transition-colors duration-300 px-4 py-2 rounded-lg font-medium" href="#">Events</a>
+<a class="text-stone-500 dark:text-stone-400 hover:bg-orange-50 dark:hover:bg-stone-800 transition-colors duration-300 px-4 py-2 rounded-lg font-medium" href="#">People</a>
+<a class="text-[#a04223] font-bold border-b-2 border-[#a04223] px-4 py-2" href="#">Profile</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant p-2 rounded-full hover:bg-orange-50 transition-colors active:scale-95 transition-transform" data-icon="notifications">notifications</button>
+<button class="material-symbols-outlined text-on-surface-variant p-2 rounded-full hover:bg-orange-50 transition-colors active:scale-95 transition-transform" data-icon="settings">settings</button>
+<div class="h-10 w-10 rounded-full overflow-hidden border-2 border-primary-container">
+<img alt="User profile" data-alt="close-up portrait of a friendly man with a warm smile and kind eyes in a bright office setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDo88hgA5tiggwIOuQ2uTtum0i9q1euRrwJ-fxjHeU3vuRi8k9Mog09eB0KU5fzkG2KEZtamLHmPC6zcgtByj0yQddU379KkTZ9sKJk5MO6Bli9Aa3gR5kpCb3CxbgE8Ac-iUlXRrMr4GLNAKwFnLRFw9_YnOanaz9vSAlHk3SEKErgt1TiE_5evOqhkIy-QpbgqJZiio3Mc8_K0tlqjtJN9yzDUyTsT9kC43aBXi0U2iL6O1x6kAJoFoo9oWf7P7F-5YfdCyIXQiE"/>
+</div>
+</div>
+</nav>
+<!-- SideNavBar (Hidden on desktop for this view as per request, but keeping shell logic reference) -->
+<aside class="hidden xl:flex flex-col gap-6 px-6 h-screen w-72 fixed left-0 top-0 pt-24 pb-8 bg-[#fff8f1] dark:bg-stone-950 font-headline font-medium z-40">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-10 h-10 rounded-xl bg-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="diversity_3" data-weight="fill" style="font-variation-settings: 'FILL' 1;">diversity_3</span>
+</div>
+<div>
+<p class="text-xl font-black text-[#a04223] leading-none">Still Here</p>
+<p class="text-xs text-stone-500 opacity-70">Internal Hub</p>
+</div>
+</div>
+<div class="space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-stone-600 dark:text-stone-400 opacity-70 hover:translate-x-1 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="dynamic_feed">dynamic_feed</span>
+<span>Feed</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-stone-600 dark:text-stone-400 opacity-70 hover:translate-x-1 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="event_note">event_note</span>
+<span>Events</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-stone-600 dark:text-stone-400 opacity-70 hover:translate-x-1 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span>People</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-[#a04223] dark:text-[#ffad94] font-bold scale-105 bg-orange-50/50" href="#">
+<span class="material-symbols-outlined" data-icon="person" data-weight="fill" style="font-variation-settings: 'FILL' 1;">person</span>
+<span>Profile</span>
+</a>
+</div>
+<button class="mt-auto bg-gradient-to-br from-primary to-primary-container text-on-primary py-4 rounded-xl font-bold shadow-lg shadow-primary/20 active:scale-95 transition-all">
+            Share a Story
+        </button>
+<div class="pt-6 mt-6 border-t border-surface-container space-y-4">
+<a class="flex items-center gap-3 px-4 text-xs text-stone-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="help_outline">help_outline</span>
+<span>Support</span>
+</a>
+<a class="flex items-center gap-3 px-4 text-xs text-stone-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="lock_open">lock_open</span>
+<span>Privacy</span>
+</a>
+</div>
+</aside>
+<main class="pt-20 xl:pl-72 max-w-[1600px] mx-auto px-8 pb-12">
+<!-- Hero Header Section -->
+<header class="relative mt-8 mb-12">
+<div class="h-64 w-full rounded-xl overflow-hidden relative">
+<img alt="Hero background" class="w-full h-full object-cover" data-alt="vibrant abstract background with swirling warm colors like peach, terracotta and soft cream with organic textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkePtYCRsqFjje0gS0yRN-jdsgvSOA0k3MZK45hAD6ME_Et8F5b7Qjbkjqm6ENNnukeLii9c7Jvw8VZnp2yphsHI2iebrGneK7m8rzUYSXpg375L69ZKV9OM0WwslaPM5KTdkVxsWMC-uOxDcAtiMfbbJRUbZ9f2hsT4rWG1N-f03ZshmBHMeD7XM38X7KJ8M9K96mYSjYCdHPqbu25bSEwelSyZGSiH5KrFDGDBQNLamYl0gH2Wgq1Wc_Jfplz5l7G_ORzi4TxJw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+</div>
+<div class="absolute -bottom-16 left-12 flex items-end gap-8">
+<div class="p-2 bg-surface rounded-xl shadow-ambient-sm">
+<img alt="Julian's profile photo" class="w-48 h-48 rounded-lg object-cover shadow-inner" data-alt="a portrait of a charismatic mid-30s professional man with short dark hair and stylish glasses smiling warmly" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAV36s6xkOl0wpFg0H2zR4iN6sA4lRUGW-LyihhMwa2XaE17xJ8un95gZyHGXzrwkausvWM854gpSKaGWzG06GeBVfO7_TXST5SpKOKrzPBbUJc5gU4fYYA3XhiKcJkQO411qZRPsv2KGn60nGzUNugj1P9LmJDumTO6L9Nn8p9eVTBc1b1oQNVWo490THkjUytSeWUxUA11QQjhSjvN3sd9MSvlLiJkvZyGE-isJnfrHfHkmocd10UgNmq6KOWflFOXTMQAMOguXw"/>
+</div>
+<div class="pb-4">
+<h1 class="text-5xl font-black font-headline text-on-background tracking-tight -mb-1">Julian Rivers</h1>
+<p class="text-2xl font-medium text-primary-dim opacity-90">Happiness Officer &amp; Culture Lead</p>
+</div>
+</div>
+<div class="absolute bottom-4 right-8 flex gap-4">
+<button class="bg-surface/80 backdrop-blur px-6 py-3 rounded-full font-bold text-primary flex items-center gap-2 hover:bg-surface transition-colors shadow-sm">
+<span class="material-symbols-outlined" data-icon="edit">edit</span> Edit Profile
+                </button>
+<button class="bg-primary px-8 py-3 rounded-full font-bold text-on-primary flex items-center gap-2 hover:opacity-90 transition-opacity shadow-lg shadow-primary/30">
+<span class="material-symbols-outlined" data-icon="chat_bubble" data-weight="fill" style="font-variation-settings: 'FILL' 1;">chat_bubble</span> Message
+                </button>
+</div>
+</header>
+<!-- Main Content Grid -->
+<div class="mt-24 grid grid-cols-12 gap-8">
+<!-- Left Column: Bio & Fun Facts (Bento Style) -->
+<div class="col-span-12 lg:col-span-4 space-y-8">
+<!-- Bio Card -->
+<div class="bg-surface-container rounded-lg p-8">
+<h3 class="text-xl font-bold font-headline mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="auto_awesome">auto_awesome</span>
+                        The Vibe
+                    </h3>
+<p class="text-on-surface-variant leading-relaxed">
+                        Helping everyone find their rhythm at "We Are Still Here". I believe community is built one cup of coffee and one retro game match at a time. Always down for a brainstorm or a chat about 90s synthesizers.
+                    </p>
+</div>
+<!-- Fun Facts Bento Grid -->
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-secondary-container/30 rounded-lg p-6 flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-secondary text-3xl mb-2" data-icon="pets">pets</span>
+<span class="text-xs font-bold uppercase tracking-wider text-secondary">Pet Parent</span>
+<p class="font-headline font-bold text-on-secondary-container">2 Corgis (Potato &amp; Bean)</p>
+</div>
+<div class="bg-tertiary-container/30 rounded-lg p-6 flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-tertiary text-3xl mb-2" data-icon="music_note">music_note</span>
+<span class="text-xs font-bold uppercase tracking-wider text-tertiary">Vinyl Count</span>
+<p class="font-headline font-bold text-on-tertiary-container">400+ Records</p>
+</div>
+<div class="col-span-2 bg-surface-container-high rounded-lg p-6 flex items-center gap-6">
+<div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="location_on">location_on</span>
+</div>
+<div>
+<span class="text-xs font-bold uppercase tracking-wider text-on-surface-variant">Home Base</span>
+<p class="font-headline font-bold">Portland, OR (The Rainy Part)</p>
+</div>
+</div>
+</div>
+<!-- Interests Chips -->
+<div class="bg-surface-container-low rounded-lg p-8">
+<h3 class="text-xl font-bold font-headline mb-6">Interests &amp; Obsessions</h3>
+<div class="flex flex-wrap gap-3">
+<span class="bg-surface px-5 py-2.5 rounded-full text-sm font-semibold border border-primary-container/30 text-primary-dim hover:bg-primary-container/10 transition-colors cursor-default">☕ Coffee Roasting</span>
+<span class="bg-surface px-5 py-2.5 rounded-full text-sm font-semibold border border-primary-container/30 text-primary-dim hover:bg-primary-container/10 transition-colors cursor-default">🕹️ Retro Gaming</span>
+<span class="bg-surface px-5 py-2.5 rounded-full text-sm font-semibold border border-primary-container/30 text-primary-dim hover:bg-primary-container/10 transition-colors cursor-default">🎨 Bauhaus Design</span>
+<span class="bg-surface px-5 py-2.5 rounded-full text-sm font-semibold border border-primary-container/30 text-primary-dim hover:bg-primary-container/10 transition-colors cursor-default">🎧 Ambient Techno</span>
+<span class="bg-surface px-5 py-2.5 rounded-full text-sm font-semibold border border-primary-container/30 text-primary-dim hover:bg-primary-container/10 transition-colors cursor-default">🏔️ Solo Hiking</span>
+<span class="bg-surface px-5 py-2.5 rounded-full text-sm font-semibold border border-primary-container/30 text-primary-dim hover:bg-primary-container/10 transition-colors cursor-default">🌱 Permaculture</span>
+</div>
+</div>
+</div>
+<!-- Right Column: Timeline/Activity (Editorial Magazine Style) -->
+<div class="col-span-12 lg:col-span-8 space-y-8">
+<div class="bg-surface-container-lowest rounded-xl p-10 shadow-ambient-sm">
+<div class="flex justify-between items-end mb-10">
+<div>
+<h2 class="text-4xl font-black font-headline tracking-tighter text-on-background">What's New</h2>
+<p class="text-on-surface-variant">Julian's recent tracks and traces</p>
+</div>
+<button class="text-primary font-bold flex items-center gap-1 hover:underline">
+                            View All <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<div class="relative space-y-12">
+<!-- Vertical Line (Implied by white space/alignment, but using a subtle tonal layer) -->
+<div class="absolute left-[27px] top-4 bottom-4 w-0.5 bg-surface-container-high"></div>
+<!-- Timeline Item 1 -->
+<div class="relative pl-16">
+<div class="absolute left-0 top-1 w-14 h-14 rounded-full bg-secondary-container flex items-center justify-center border-4 border-surface-container-lowest z-10">
+<span class="material-symbols-outlined text-secondary" data-icon="celebration">celebration</span>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-start">
+<div>
+<p class="text-sm font-bold text-secondary uppercase tracking-widest mb-1">Event Joined</p>
+<h4 class="text-2xl font-bold font-headline">The Great Office Bake-Off 2024</h4>
+</div>
+<span class="text-sm text-on-surface-variant font-medium">2 hours ago</span>
+</div>
+<div class="rounded-xl overflow-hidden">
+<img alt="Baking event" class="w-full h-48 object-cover" data-alt="warm inviting scene of a group of people decorating cupcakes in a bright modern kitchen with colorful frosting and sprinkles" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYU0wP0v58l6ci7MRhuJyli2bunxkDu7WXLoLFgjAMG6uAzu6yFxlyuLyyC1b5C30U79U8o8TX0df3ylZ24xwLxYl1Cfg1PchIZ-h6iFcE7T_3W3TpA2CzhlgRLL6Z_oZtEY-CfiQ13Ej0VVXORNRBg-wiQOYcPWFCCzU0Gx6-xmjzkukePWaK34uXVwcWl5Vlyp2n13NKfn3jW3lpMTlOyztQMm05G1DWljPJtghtJTXq08mRk0dUwZ3wFWufr9TDnLUNMV9zqBM"/>
+</div>
+<p class="text-on-surface-variant italic">"Ready to defend my title as the King of Croissants. See you all at the flour-station!"</p>
+</div>
+</div>
+<!-- Timeline Item 2 -->
+<div class="relative pl-16">
+<div class="absolute left-0 top-1 w-14 h-14 rounded-full bg-tertiary-container flex items-center justify-center border-4 border-surface-container-lowest z-10">
+<span class="material-symbols-outlined text-tertiary" data-icon="map">map</span>
+</div>
+<div class="space-y-3">
+<div class="flex justify-between items-start">
+<div>
+<p class="text-sm font-bold text-tertiary uppercase tracking-widest mb-1">New Spotted</p>
+<h4 class="text-2xl font-bold font-headline">Hidden Gem: Oak Street Records</h4>
+</div>
+<span class="text-sm text-on-surface-variant font-medium">Yesterday</span>
+</div>
+<p class="text-on-surface-variant">Found a rare first-pressing of 'Music for Airports'. The owner is super chill. Definitely worth the 20-minute walk from the South Office.</p>
+<div class="flex gap-2">
+<span class="bg-surface-container-high px-3 py-1 rounded-full text-xs font-bold text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="tag">tag</span> Music
+                                    </span>
+<span class="bg-surface-container-high px-3 py-1 rounded-full text-xs font-bold text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="tag">tag</span> HiddenGems
+                                    </span>
+</div>
+</div>
+</div>
+<!-- Timeline Item 3 -->
+<div class="relative pl-16">
+<div class="absolute left-0 top-1 w-14 h-14 rounded-full bg-primary-container flex items-center justify-center border-4 border-surface-container-lowest z-10">
+<span class="material-symbols-outlined text-primary" data-icon="favorite" data-weight="fill" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between items-start">
+<div>
+<p class="text-sm font-bold text-primary uppercase tracking-widest mb-1">Giving Back</p>
+<h4 class="text-2xl font-bold font-headline">Endorsed 'Sarah Jenkins' for Leadership</h4>
+</div>
+<span class="text-sm text-on-surface-variant font-medium">3 days ago</span>
+</div>
+<p class="text-on-surface-variant leading-relaxed">Sarah's work on the sustainability initiative was masterclass. Proud to have her on the team!</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Colleagues / Connections -->
+<div class="bg-surface-container rounded-xl p-8">
+<h3 class="text-xl font-bold font-headline mb-6">Frequently Hanging With</h3>
+<div class="flex -space-x-4">
+<div class="w-14 h-14 rounded-full border-4 border-surface-container bg-surface overflow-hidden relative group cursor-pointer">
+<img alt="Colleague 1" data-alt="portrait of a smiling woman with glasses and curly hair" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCu1GIR9BWG0IFE5qjS6i4oGJ3mCLGuJ4yeMjxK9UOh8ePKKT0fjPUNLUChGjeQ5px7mCbqiJuNC_iTxW-CgAxEAp6H_bWaIGZisQ4xgsyGjJsPwSB1YFPaNHyqmFNWkkPnqjRfv16N5qphB7c_0iQHr9dCtM2g5oM2aZFCuqVxbWN3Ir3NnRpRf6hEeGjGLTdjCzcHF_tKY-KZBi5LQ7XXma2XG-uKuhxkrdukmeslIeB6d-ppqkmL6vqY5Wq3w4szVhdY_ie7Xks"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div class="w-14 h-14 rounded-full border-4 border-surface-container bg-surface overflow-hidden relative group cursor-pointer">
+<img alt="Colleague 2" data-alt="portrait of a man with a short beard and friendly expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClfXk17YwhM3LlQs3187uZ3dXw8PSEWHM0MKfSAOyYvAO22VgE9oYULehh0vLdenGcBFsWkNldrTHNUFEIGtWkekcGW-gr7H2uz83-OFRIS5GRVEJ_vIJ0VK7POijvc_HYLgwKJ5_duhp6Kxs5udDgrt_9Kl9UFfeeXVSDb5h6MN3rXPMWn41V8IkHuVBWmH0igeyQVuZx1C_xhChnzfSJ1hhITipX869xuj4ZQzq12M_MLYuGfBH1naMvcm3VKrU_1BzwTyYyTYo"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div class="w-14 h-14 rounded-full border-4 border-surface-container bg-surface overflow-hidden relative group cursor-pointer">
+<img alt="Colleague 3" data-alt="portrait of a blonde woman laughing in a casual setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB22PR1aql6VO8dXOnDdLpbJVQWOANziewUoZFJZApGGdFfu4G8S_1YSSUMIA8GbbATIyQJ-9q7DNDMHL-vLvg-6PjVS-VNErzjudykn7nGIIVnTlHM9ZLRyZWo59xv5FtbIYa-5ZtKnTlHKs_vGtRzTNcFy9wXRTL1NSz772hLlVlusy2yI2slFehnG-yaq9ZT034d1m0rRic7W1ux4a6GdlzTOJ2rQ9bMSBaMkNjTnzJxH8cnFRonvCW9wnEQjWqA1hiiEOB-V4c"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div class="w-14 h-14 rounded-full border-4 border-surface-container bg-surface overflow-hidden relative group cursor-pointer">
+<img alt="Colleague 4" data-alt="portrait of a man with spectacles in a clean studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByYMRpT44sqhxfW0i3Rmee2Z4nsl0ySnjFHtwBHBlV2Y9Rwhif25pUowFliIzdn9l55jLADsrspyxJ02rlp3osMiuBJ1FbuMorSfy7axaatT4P22c3-Rcxqsxd6mQNwJla7mouMpJEdGlKhFdnSUiPrrFRDH1241eTc-I7THJcDcnI-JBtaNkvf5sBhUglbetJpY14MchUeP51GYb4KviwabetpfqxYjmqnLFLycn8zwFG7y28pvu8ROAnq0fLJttUHKZHSrTpenM"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div class="w-14 h-14 rounded-full border-4 border-surface-container bg-surface-container-high flex items-center justify-center font-bold text-on-surface-variant cursor-pointer hover:bg-surface-container-highest transition-colors">
+                            +12
+                        </div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Contextual FAB - suppressed on profile page as per hierarchy instructions, but shown here for UI completeness as a 'Post' action common in socials -->
+<button class="fixed bottom-10 right-10 w-16 h-16 rounded-full bg-gradient-to-br from-primary to-primary-container text-on-primary shadow-[0_10px_40px_rgba(160,66,35,0.3)] flex items-center justify-center active:scale-95 transition-all z-50">
+<span class="material-symbols-outlined text-3xl" data-icon="add" data-weight="fill" style="font-variation-settings: 'FILL' 1;">add</span>
+</button>
+</body></html>
